@@ -11,6 +11,7 @@ import FacebookIcon from "../../w-assets/facebook-icon.png";
 import TwitterIcon from "../../w-assets/twitter.png";
 import YoutubeIcon from "../../w-assets/youtube.png";
 import InstagramIcon from "../../w-assets/instagram.png";
+import { Button } from "react-scroll";
 
 const Contact = () => {
   const form = useRef();
@@ -74,8 +75,9 @@ const Contact = () => {
             rows="5"
             placeholder="Your Message"
           ></textarea>
-          <input type="submit" value="Send" className="submitBtn" />
-
+          <button type="submit" value="Send" className="submitBtn">
+            Submit
+          </button>
           <div className="links">
             <img src={FacebookIcon} alt="Facebook" className="link" />
             <img src={TwitterIcon} alt="Twitter" className="link" />
