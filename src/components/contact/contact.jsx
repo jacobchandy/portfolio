@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 import "./contact.css";
@@ -22,11 +22,13 @@ const Contact = () => {
         "service_t3e5o9d",
         "template_mcpq2ee",
         form.current,
-        "14DZv6fJdUPY7VtjxHiOk"
+        "I1StfWt3oQMZPv1G7"
       )
       .then(
         (result) => {
           console.log(result.text);
+          e.target.reset();
+          alert("Email Sent !");
         },
         (error) => {
           console.log(error.text);
@@ -72,9 +74,8 @@ const Contact = () => {
             rows="5"
             placeholder="Your Message"
           ></textarea>
-          <button type="submit" value="Send" className="submitBtn">
-            Submit
-          </button>
+          <input type="submit" value="Send" className="submitBtn" />
+
           <div className="links">
             <img src={FacebookIcon} alt="Facebook" className="link" />
             <img src={TwitterIcon} alt="Twitter" className="link" />
